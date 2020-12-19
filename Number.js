@@ -1,21 +1,11 @@
-let check = document.querySelector(".check");
-let number = document.querySelector(".number");
-let text = document.querySelector(".text");
+function myFunction() {
+    var str = document.getElementById("phoneField5").value;
+    var n = str.length;
 
-let regex = /^[\d,\s,\+,\-]{5,20}/;
 
-check.addEventListener("click",()=>{
-	if(number.value ==""){
-		text.innerText = "Please Enter Your Phone Number";
-		text.style.color = "#fff";
-	}
-	else if(number.value.match(regex)){
-		text.innerText = "Congrats! You Enter A Valid Phone Number";
-		text.style.color = "rgba(4,125,9,1)";
-	}
-	else
-		{
-		text.innerText = "Oops! Your Phone Number Is Invalid";
-		text.style.color = "#da3400";
-		}
-});
+    if (n < 10) {
+        document.getElementById("demo").innerHTML = "Wrong";
+    } else {
+        document.getElementById("demo").innerHTML = "correct";
+    }
+}
